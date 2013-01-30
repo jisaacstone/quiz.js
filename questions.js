@@ -66,7 +66,7 @@ document.questions = [
             "num = add(5, %num%)\n" +
             "print num\n" +
             "",
-        'answer': function(num){}
+        'answer': function(num){return num + 5}
     },
     {
         'question': '' +
@@ -75,12 +75,17 @@ document.questions = [
             "    return result\n" +
             "\n" +
             "num = %num%\n" +
-            "while num &lt; 10:\n" +
+            "while num &lt; 12:\n" +
             "    num = multiply(num, 2)\n" +
             "\n" +
             "print num\n" +
             "",
-        'answer': function(num){}
+        'answer': function(num){
+            while(num < 12){
+                num *= 2;
+            }
+            return num
+        }
     },
     {
         'question': '' +
@@ -92,7 +97,7 @@ document.questions = [
             "num = first_item(a_list)\n" +
             "print num\n" +
             "",
-        'answer': function(num){}
+        'answer': function(num){return num}
     },
     {
         'question': '' +
@@ -103,7 +108,7 @@ document.questions = [
             "\n" +
             "print num\n" +
             "",
-        'answer': function(num){}
+        'answer': function(num){return num + 8}
     },
     {
         'question': '' +
@@ -111,7 +116,7 @@ document.questions = [
             "num = a_dict['one']\n" +
             "print num\n" +
             "",
-        'answer': function(num){}
+        'answer': function(num){return num}
     },
     {
         'question': '' +
@@ -119,21 +124,21 @@ document.questions = [
             "num = a_list[0] + a_list[1]\n" +
             "print num\n" +
             "",
-        'answer': function(num){}
+        'answer': function(num){return num + 4}
     },
     {
         'question': '' +
-            "def add(num_a, num_b):\n" +
+            "def mystery_function(num_a, num_b):\n" +
             "    if num_b == 0:\n" +
             "        return num_a\n" +
             "    else:\n" +
             "        num = add(num_a + 1, num_b - 1)\n" +
             "        return num\n" +
             "\n" +
-            "num = add(%num%, 2)\n" +
+            "num = mystery_function(%num%, 2)\n" +
             "print num\n" +
             "",
-        'answer': function(num){}
+        'answer': function(num){return num + 2}
     },
     {
         'question': '' +
@@ -148,7 +153,7 @@ document.questions = [
             "num = apply_funct(multiply)\n" +
             "print num\n" +
             "",
-        'answer': function(num){}
+        'answer': function(num){return num * 3}
     },
     {
         'question': '' +
@@ -159,7 +164,7 @@ document.questions = [
             "my_office = Office()\n" +
             "print my_office.num_workers\n" +
             "",
-        'answer': function(num){}
+        'answer': function(num){return num}
     },
     {
         'question': '' +
@@ -175,7 +180,7 @@ document.questions = [
             "my_office = Office()\n" +
             "print my_office.happy_office()\n" +
             "",
-        'answer': function(num){}
+        'answer': function(num){return num > 4 ? 'not happy' : 'happy'}
     },
     {
         'question': '' +
@@ -188,7 +193,7 @@ document.questions = [
             "his_office = Office(7, my_office.num_workers + 1)\n" +
             "print his_office.num_workers\n" +
             "",
-        'answer': function(num){}
+        'answer': function(num){return num + 1}
     },
     {
         'question': '' +
@@ -205,6 +210,6 @@ document.questions = [
             "my_office.steal_their_computers(his_office)\n" +
             "print my_office.num_computers\n" +
             "",
-        'answer': function(num){}
+        'answer': function(num){return num + 3}
     }
 ]
