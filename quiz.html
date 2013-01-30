@@ -2,6 +2,7 @@
 <head>
     <link rel="stylesheet" href="quiz.css"/>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="questions.js"></script>
     <script src="quiz.js"></script>
     <script type="text/javascript">
 
@@ -32,17 +33,6 @@
             $('#quiz-message').html('');
             $('#quiz-title').html('What will this program print?');
         }
-
-        document.questions = [
-            {
-                'text': 'a = "hello"\nprint a',
-                'answer': function(num) { return 'hello' }
-            },
-            {
-                'text': 'print 3 + %num%',
-                'answer': function(num) { return num + 3 }
-            }
-        ];
 
     </script>
 </head>
