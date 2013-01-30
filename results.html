@@ -1,0 +1,73 @@
+<head>
+    <link rel="stylesheet" href="quiz.css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        resultsFromURLArgs = function() {
+            var dataString = document.location.search.slice(1).split('&');
+            var resultsArray = {};
+            while(dataString.length) {
+                next = dataString.pop().split('=');
+                resultsArray[next[0]] = next[1];
+            }
+            return resultsArray;
+        }
+        
+        displayResults = function(results) {
+            var ul = $(document.createElement('ul'));
+            for(var key in results) {
+                ul.append(
+                    $(document.createElement('li')).html(key + ': ' + results[key])
+                );
+            }
+            $('#results').append(ul);
+        }
+
+        displayMessage = function(results) {
+            var messages = [
+                '<p>You did not get any correct answers.' +
+                '<p>That\'s OK. These are programming questions' +
+                ' and you are not a programmer. Thanks for' +
+                ' participating in my little quiz!',
+                '<p>You got a few correct answers' +
+                '<p>Pretty good for interpreting concepts and ideas' +
+                ' you have never seen before. Good job!',
+                '<p>You got many correct answers' +
+                '<p>That is fantastic and unexpected. Though I did' +
+                ' attempt to choose example programs that were' +
+                ' easily understood I still did not expect many' +
+                ' non-programmers to answer so many correctly.',
+                '<p>You got most of those correct!' +
+                '<p>If you are not already a programmer you' +
+                ' might want to consider a career change.' +
+                ' It\'s not nearly as boring as stereotypically' +
+                ' believed, and the pay isn\'t bad either.',
+                '<p>You got every single question correct.' +
+                '<p>Unbelievable. I literally cannot believe it.' +
+                ' If you are not already making six figures' +
+                ' contact me and I\'ll see if we can\'t do' +
+                ' something about that.']
+
+            var messageIndex = Math.floor(
+                results['correct'] / results['total'] * 4
+            );
+
+            $('#results').append(
+                $('<div>').html(messages[messageIndex])
+            );
+        }
+
+        $(function(){
+            var results = resultsFromURLArgs();
+            displayResults(results);
+            displayMessage(results);
+        });
+    </script>
+</head>
+<body>
+    <h2>How did you do?</h2>
+    <p id="results"></p>
+    <p class='footer'>
+        Any questions, comments or criticisms?
+        Find me at <a href='https://github.com/jisaacstone'>github.com/jisaacstone</a>
+    </p>
+</body>

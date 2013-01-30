@@ -1,0 +1,35 @@
+
+#answer, #submit-answer, #end-quiz, #skip-question {
+    display: None;
+}
+body {
+    width: 80%;
+    margin: auto;
+    padding: 5%;
+    color: rgba(22, 35, 46, 1);
+    box-shadow: 0.1em 0.1em 2em rgba(22, 35, 46, 0.7);
+}
+#buttons {
+    margin-top: 1em;
+}
+.button {
+    padding: 0.2em 0.5em;
+    margin: 0.2em 0.5em;
+    box-shadow: 0.2em 0.3em 0.5em rgba(12, 35, 66, 0.4);
+    cursor: pointer;
+}
+.button:hover {
+    background-color: rgba(114, 215, 148, 0.5);
+    box-shadow: 0.1em 0.2em 0.2em rgba(12, 35, 66, 0.5);
+}
+li:first-letter {
+    text-transform: uppercase;
+}
+pre {
+    overflow-x: auto;
+}
+.footer {
+    color: rgba(12, 35, 66, 1);
+    font-size: 0.8em;
+    padding-top: 1.8em;
+}

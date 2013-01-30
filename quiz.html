@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<head>
+    <link rel="stylesheet" href="quiz.css"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="quiz.js"></script>
+    <script type="text/javascript">
+
+        $(function() {
+            var q = new quiz();
+            q.questions = document.questions;
+            q.messageSelector = '#quiz-message';
+            q.answerSelector = '#answer';
+            q.questionSelector = '#question';
+            $('#start-quiz').click(function() {
+                showButtons();
+                q.startQuiz();
+            });
+            $('#submit-answer').click(function() {
+                q.submitAnswer();
+            });
+            $('#skip-question').click(function() {
+                q.skipQuestion();
+            });
+            $('#end-quiz').click(function() {
+                q.endQuiz();
+            });
+        });
+
+        function showButtons() {
+            $('#start-quiz').hide();
+            $('#answer, #submit-answer, #skip-question, #end-quiz').show();
+            $('#quiz-message').html('');
+            $('#quiz-title').html('What will this program print?');
+        }
+
+        document.questions = [
+            {
+                'text': 'a = "hello"\nprint a',
+                'answer': function(num) { return 'hello' }
+            },
+            {
+                'text': 'print 3 + %num%',
+                'answer': function(num) { return num + 3 }
+            }
+        ];
+
+    </script>
+</head>
+<body>
+    <h1 id="quiz-title">How Intuitive Is Programming?</h1>
+    <h2 id="quiz-message">Click 'start' to begin"</h2>
+    <div id="question-box">
+        <pre id="question">
+These questions are designed to see how many common programming
+concepts are intuitive to people who have never written any
+code.
+
+Please do not take the quiz if you are a professional or
+amateur programmer.
+        </pre>
+        <input type="text" id="answer"></input>
+    </div>
+    <div id="buttons">
+        <span class="button" id="start-quiz">start</span>
+        <span class="button" id="submit-answer">submit answer</span>
+        <span class="button" id="skip-question">skip question</span>
+        <span class="button" id="end-quiz">end quiz</span>
+    </div>
+</body>
