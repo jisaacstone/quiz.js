@@ -59,11 +59,11 @@ document.questions = [
     },
     {
         'text': '' +
-            "def add(num_a, num_b):\n" +
+            "def mystery_function(num_a, num_b):\n" +
             "    result = num_a + num_b\n" +
             "    return result\n" +
             "\n" +
-            "num = add(5, %num%)\n" +
+            "num = mystery_function(5, %num%)\n" +
             "print num\n" +
             "",
         'answer': function(num){return num + 5}
