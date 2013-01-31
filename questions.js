@@ -112,7 +112,7 @@ document.questions = [
     },
     {
         'text': '' +
-            "a_dict = {'zero'=6, 'one'=%num%, 'two'=3}\n" +
+            "a_dict = {'zero': 6, 'one': %num%, 'two': 3}\n" +
             "num = a_dict['one']\n" +
             "print num\n" +
             "",
