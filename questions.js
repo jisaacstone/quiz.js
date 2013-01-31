@@ -1,19 +1,19 @@
 document.questions = [
     {
-        'question': '' +
+        'text': '' +
             "print 'hello'\n" +
             "",
         'answer': function(num){return 'hello'}
     },
     {
-        'question': '' +
+        'text': '' +
             "num = %num%\n" +
             "print num\n" +
             "",
         'answer': function(num){return num}
     },
     {
-        'question': '' +
+        'text': '' +
             "num = 4\n" +
             "num = 8\n" +
             "num = %num%\n" +
@@ -22,7 +22,7 @@ document.questions = [
         'answer': function(num){return num}
     },
     {
-        'question': '' +
+        'text': '' +
             "num_a = 2\n" +
             "num_b = %num%\n" +
             "num_a = num_b\n" +
@@ -31,7 +31,7 @@ document.questions = [
         'answer': function(num){return num}
     },
     {
-        'question': '' +
+        'text': '' +
             "num_a = %num%\n" +
             "num_b = 5\n" +
             "if num_a &gt; num_b:\n" +
@@ -46,7 +46,7 @@ document.questions = [
         }
     },
     {
-        'question': '' +
+        'text': '' +
             "def add_1(num):\n" +
             "    num_plus = num + 1\n" +
             "    return num_plus\n" +
@@ -58,7 +58,7 @@ document.questions = [
         'answer': function(num){return num + 1}
     },
     {
-        'question': '' +
+        'text': '' +
             "def add(num_a, num_b):\n" +
             "    result = num_a + num_b\n" +
             "    return result\n" +
@@ -69,7 +69,7 @@ document.questions = [
         'answer': function(num){return num + 5}
     },
     {
-        'question': '' +
+        'text': '' +
             "def multipy(num_a, num_b):\n" +
             "    result = num_a * num_b\n" +
             "    return result\n" +
@@ -88,7 +88,7 @@ document.questions = [
         }
     },
     {
-        'question': '' +
+        'text': '' +
             "def first_item(lst):\n" +
             "    item = lst[0]\n" +
             "    return item\n" +
@@ -100,7 +100,7 @@ document.questions = [
         'answer': function(num){return num}
     },
     {
-        'question': '' +
+        'text': '' +
             "num = 0\n" +
             "a_list = [3, %num%, 5]\n" +
             "for item in a_list:\n" +
@@ -111,7 +111,7 @@ document.questions = [
         'answer': function(num){return num + 8}
     },
     {
-        'question': '' +
+        'text': '' +
             "a_dict = {'zero'=6, 'one'=%num%, 'two'=3}\n" +
             "num = a_dict['one']\n" +
             "print num\n" +
@@ -119,7 +119,7 @@ document.questions = [
         'answer': function(num){return num}
     },
     {
-        'question': '' +
+        'text': '' +
             "a_list = [%num%, 4, 1]\n" +
             "num = a_list[0] + a_list[1]\n" +
             "print num\n" +
@@ -127,12 +127,12 @@ document.questions = [
         'answer': function(num){return num + 4}
     },
     {
-        'question': '' +
+        'text': '' +
             "def mystery_function(num_a, num_b):\n" +
             "    if num_b == 0:\n" +
             "        return num_a\n" +
             "    else:\n" +
-            "        num = add(num_a + 1, num_b - 1)\n" +
+            "        num = mustery_funciton(num_a + 1, num_b - 1)\n" +
             "        return num\n" +
             "\n" +
             "num = mystery_function(%num%, 2)\n" +
@@ -141,7 +141,7 @@ document.questions = [
         'answer': function(num){return num + 2}
     },
     {
-        'question': '' +
+        'text': '' +
             "def multiply(a, b):\n" +
             "    return a * b\n" +
             "\n" +
@@ -156,7 +156,7 @@ document.questions = [
         'answer': function(num){return num * 3}
     },
     {
-        'question': '' +
+        'text': '' +
             "class Office(object):\n" +
             "    num_computers = 4\n" +
             "    num_workers = %num%\n" +
@@ -167,7 +167,7 @@ document.questions = [
         'answer': function(num){return num}
     },
     {
-        'question': '' +
+        'text': '' +
             "class Office(object):\n" +
             "    num_computers = 4\n" +
             "    num_workers = %num%\n" +
@@ -183,7 +183,7 @@ document.questions = [
         'answer': function(num){return num > 4 ? 'not happy' : 'happy'}
     },
     {
-        'question': '' +
+        'text': '' +
             "class Office(object):\n" +
             "    def __init__(self, num_computers, num_workers):\n" +
             "        self.num_computers = num_computers\n" +
@@ -196,7 +196,7 @@ document.questions = [
         'answer': function(num){return num + 1}
     },
     {
-        'question': '' +
+        'text': '' +
             "class Office(object):\n" +
             "    def __init__(self, num_computers):\n" +
             "        self.num_computers = num_computers\n" +
