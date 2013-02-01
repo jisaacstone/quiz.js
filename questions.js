@@ -37,7 +37,7 @@ document.questions = [
             "if num_a &gt; num_b:\n" +
             "    print 'greater'\n" +
             "else if num_a &lt; num_b:\n" +
-            "    print 'less than'\n" +
+            "    print 'less'\n" +
             "else if num_a == num_b:\n" +
             "    print 'equal'\n" +
             "",
